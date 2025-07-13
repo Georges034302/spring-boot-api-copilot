@@ -337,6 +337,7 @@ jobs:
           distribution: 'temurin'
       - name: Build and Test with Maven
         run: mvn clean package
+        working-directory: PlayerApp
 ```
 
 ---
