@@ -321,23 +321,22 @@ name: Java CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
 
 jobs:
   build:
+    name: Build and Test Player App
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
-
       - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
           java-version: '21'
           distribution: 'temurin'
-
-      - name: Build and test with Maven
-        run: mvn
+      - name: Build and Test with Maven
+        run: mvn clean package
 ```
 
 ---

@@ -16,5 +16,5 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-      - name: Build with Maven
-        run: mvn
+      - name: Build and Test with Maven
+        run: mvn clean package
